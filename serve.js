@@ -13,7 +13,6 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.url} at ${new Date()}`);
     next();
 });
-
 //Root route
 app.get("/", (req, res) => {
     res.send("My Week 2 API!");
@@ -34,11 +33,11 @@ app.get("/user/:id", (req, res) => {
     const userId = req.params.id;
     res.send(`User ${userId} profile.`);
 });
-
+//Listens to the specified port
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-
+//Additional route for demonstration
 app.get("/about", (req, res) => {
     res.send("This is the about page.");
 });
