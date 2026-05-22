@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>My App</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        
+    </head>
+    <body>
+        <div class="container">
+            <img src="taylor-8Vt2haq8NSQ-unsplash.jpg" alt="My App Image" class="profile-pic" />
+            <h1>Welcome to My App</h1>
+            <p>This is a simple HTML file served by Express.</p>
+            <input type="text" id="inputName" placeholder="Enter your name" /><br><br>
+            <label id="output"></label>
+        </div>
+    </body>
+</html>
+<script>
+    const inputName = document.getElementById("inputName");
+    const output = document.getElementById("output");
+
+    inputName.addEventListener("input", () => {
+        name = inputName.value.trim();
+        output.textContent = name ? `Hello, ${name}!`: "....";
+    });
+
+</script>
